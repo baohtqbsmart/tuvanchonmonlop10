@@ -1,4 +1,4 @@
-# Tư vấn chọn môn học lớp 10
+# Yersin School Đà Lạt - Tư vấn chọn môn học lớp 10
 
 Ứng dụng web tĩnh (HTML/CSS/JavaScript thuần, không cần cài đặt gì thêm) giúp học sinh lớp 10
 trả lời bảng câu hỏi khảo sát theo thang đo Likert (5 mức độ) để nhận gợi ý:
