@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tư vấn chọn môn học lớp 10</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Tư vấn chọn môn học lớp 10</h1>
+      <p class="subtitle">Bảng khảo sát Likert giúp em tìm ngành học, trường đại học phù hợp và lựa chọn giữa môn <strong>Hóa học</strong> hoặc <strong>Địa lý</strong>.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- MÀN HÌNH GIỚI THIỆU -->
+    <section id="intro-screen" class="screen active">
+      <div class="card intro-card">
+        <h2>Giới thiệu</h2>
+        <p>Bảng câu hỏi gồm <strong>40 phát biểu</strong>, chia thành 9 nhóm ngành và phần cảm nhận về hai môn học lựa chọn.
+          Với mỗi phát biểu, em hãy chọn mức độ đồng ý phù hợp nhất với bản thân theo thang điểm từ 1 đến 5:</p>
+        <ol class="likert-scale-explain">
+          <li>1 - Hoàn toàn không đồng ý</li>
+          <li>2 - Không đồng ý</li>
+          <li>3 - Bình thường</li>
+          <li>4 - Đồng ý</li>
+          <li>5 - Hoàn toàn đồng ý</li>
+        </ol>
+        <p>Hãy trả lời trung thực theo đúng năng lực, sở thích và hiểu biết của em - không có câu trả lời đúng hay sai.</p>
+        <div class="form-row">
+          <label for="student-name">Họ và tên (không bắt buộc)</label>
+          <input type="text" id="student-name" placeholder="Nhập họ tên...">
+        </div>
+        <div class="form-row">
+          <label for="student-class">Lớp (không bắt buộc)</label>
+          <input type="text" id="student-class" placeholder="VD: 10A1">
+        </div>
+        <button id="start-btn" class="btn btn-primary">Bắt đầu khảo sát</button>
+      </div>
+    </section>
+
+    <!-- MÀN HÌNH KHẢO SÁT -->
+    <section id="survey-screen" class="screen">
+      <div class="progress-wrap">
+        <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+        <span id="progress-text">0 / 40</span>
+      </div>
+      <form id="survey-form"></form>
+      <div class="survey-actions">
+        <button id="submit-btn" class="btn btn-primary" type="button">Xem kết quả</button>
+      </div>
+    </section>
+
+    <!-- MÀN HÌNH KẾT QUẢ -->
+    <section id="result-screen" class="screen">
+      <div class="card">
+        <h2 id="result-heading">Kết quả tư vấn</h2>
+        <p id="result-sub"></p>
+      </div>
+
+      <div class="card">
+        <h3>1. Top 5 ngành học đại học phù hợp nhất</h3>
+        <ol id="majors-list" class="majors-list"></ol>
+      </div>
+
+      <div class="card">
+        <h3>2. Trường đại học gợi ý theo từng ngành</h3>
+        <div class="table-wrap">
+          <table id="university-table">
+            <thead>
+              <tr><th>Ngành học</th><th>Trường đại học gợi ý</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>3. Môn học nên đăng ký tại trường</h3>
+        <div id="elective-result" class="elective-result"></div>
+      </div>
+
+      <div class="result-actions">
+        <button id="retake-btn" class="btn btn-secondary" type="button">Làm lại khảo sát</button>
+        <button id="print-btn" class="btn btn-primary" type="button">In / Lưu kết quả</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Công cụ mang tính chất tham khảo, hỗ trợ định hướng ban đầu. Em nên trao đổi thêm với giáo viên chủ nhiệm, tư vấn hướng nghiệp và tìm hiểu tổ hợp xét tuyển, điểm chuẩn cập nhật hằng năm của từng trường trước khi quyết định.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
